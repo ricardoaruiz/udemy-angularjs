@@ -1,0 +1,41 @@
+<html ng-app="CadClientes">
+    <head>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+                
+        <title>Cadastro de Clientes</title>
+    </head>
+    <body ng-controller="CadClienteCtrl">
+        <div class="jumbotron">
+            
+            <h3 ng-bind="app"></h3>
+            
+            <table class="table table-striped">
+                <tr>
+                    <td><b>Nome</b></td>
+                    <td><b>Código</b></td>
+                </tr>
+                <tr ng-repeat="cliente in clientes">
+                    <td>{{cliente.nome}}</td>
+                    <td>{{cliente.codigo}}</td>
+                </tr>
+
+            </table>
+            
+            <hr>
+
+            <input class="form-control" type="text" ng-model="cliente.nome" placeholder="Nome">
+            <input class="form-control" type="text" ng-model="cliente.codigo" placeholder="Código">
+
+            <button class="btn btn-primary btn-block" ng-click="adicionarClientes(cliente)">Adicionar</button>
+            
+        </div>
+        
+        
+        <script src="js/angular/angular.js"></script>
+        <script src="js/app-cad-clientes.js"></script>
+        <script src="js/controller/CadClienteCtrl.js"></script>        
+    </body>
+</html>
