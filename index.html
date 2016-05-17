@@ -28,6 +28,10 @@
 
             <input class="form-control" type="text" ng-model="cliente.nome" placeholder="Nome">
             <input class="form-control" type="text" ng-model="cliente.codigo" placeholder="Código">
+
+            <select class="form-control" ng-model="cliente.tipoClientes" ng-options="tipoCliente.tipo for tipoCliente in tipoClientes">
+                <option value="">Selecione um tipo de cliente</option>
+            </select>
             
             <button class="btn btn-primary btn-block" ng-click="adicionarClientes(cliente)" ng-disabled="!cliente.nome || !cliente.codigo">Adicionar</button>
             
