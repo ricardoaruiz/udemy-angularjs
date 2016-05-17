@@ -9,5 +9,6 @@ app.controller("CadClienteCtrl", function($scope){
     
     $scope.adicionarClientes = function(cliente){
         $scope.clientes.push(angular.copy(cliente));
+        delete $scope.cliente;
     };
 })

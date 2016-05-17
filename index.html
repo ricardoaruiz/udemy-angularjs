@@ -29,7 +29,7 @@
             <input class="form-control" type="text" ng-model="cliente.nome" placeholder="Nome">
             <input class="form-control" type="text" ng-model="cliente.codigo" placeholder="Código">
 
-            <button class="btn btn-primary btn-block" ng-click="adicionarClientes(cliente)">Adicionar</button>
+            <button class="btn btn-primary btn-block" ng-click="adicionarClientes(cliente)" ng-disabled="!cliente.nome || !cliente.codigo">Adicionar</button>
             
         </div>
         
