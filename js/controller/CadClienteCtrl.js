@@ -2,15 +2,17 @@ app.controller("CadClienteCtrl", function($scope){
     $scope.app="Cadastro de Clientes";
     
     $scope.clientes = [
-        {nome : "Ricardo Ruiz",codigo : "0001"},
-        {nome : "Cinthya Hayane de Carvalhor",codigo : "0002"},
-        {nome : "Guilherme Carvalho Ruiz",codigo : "0003"}
+        {codigo : "0001", nome : "Ricardo",},
+        {codigo : "0002", nome : "Cinthya"},
+        {codigo : "0003", nome : "Guilherme"}
     ];
     
     $scope.tipoClientes = [
-        {tipo : "Pessoa Física", codigo : "01"},
-        {tipo : "Pessoa Jurídica", codigo : "02"},
-        {tipo : "Sócios", codigo : "03"},
+        {codigo : "01", tipo : "Pessoa Física", loca: "Nacional"},
+        {codigo : "02", tipo : "Pessoa Jurídica", loca: "Nacional"},
+        {codigo : "03", tipo : "Sócios", loca: "Nacional"},
+        {codigo : "01", tipo : "Pessoa Física", loca: "Intenacioal"},
+        {codigo : "02", tipo : "Pessoa Jurídica", loca: "Intenacional"},        
     ];
     
     $scope.adicionarClientes = function(cliente){
