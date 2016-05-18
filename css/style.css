@@ -15,3 +15,7 @@
 .form-control{
     margin-bottom: 10px;
 }
+
+.selecionado{
+    background-color: #aaaff4;
+}

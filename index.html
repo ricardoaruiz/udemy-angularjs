@@ -12,13 +12,13 @@
             
             <h3 ng-bind="app"></h3>
             
-            <table class="table table-striped">
+            <table class="table">
                 <tr>
                     <td><b>Nome</b></td>
                     <td><b>Código</b></td>
                     <td><b>Tipo Cliente</b></td>
                 </tr>
-                <tr ng-repeat="cliente in clientes">
+                <tr class="selecionado" ng-repeat="cliente in clientes">
                     <td>{{cliente.nome}}</td>
                     <td>{{cliente.codigo}}</td>
                     <td>{{cliente.tipoCliente.tipo}}</td>
@@ -31,7 +31,7 @@
             <input class="form-control" type="text" ng-model="cliente.nome" placeholder="Nome">
             <input class="form-control" type="text" ng-model="cliente.codigo" placeholder="Código">
 
-            <select class="form-control" ng-model="cliente.tipoCliente" ng-options="tipoCliente.tipo for tipoCliente in tipoClientes">
+            <select class="form-control" ng-model="cliente.tipoCliente" ng-options="tipoCliente.tipo group by tipoCliente.local for tipoCliente in tipoClientes">
                 <option value="">Selecione um tipo de cliente</option>
             </select>
             

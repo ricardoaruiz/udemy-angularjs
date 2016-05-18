@@ -8,11 +8,11 @@ app.controller("CadClienteCtrl", function($scope){
     ];
     
     $scope.tipoClientes = [
-        {codigo : "01", tipo : "Pessoa Física", loca: "Nacional"},
-        {codigo : "02", tipo : "Pessoa Jurídica", loca: "Nacional"},
-        {codigo : "03", tipo : "Sócios", loca: "Nacional"},
-        {codigo : "01", tipo : "Pessoa Física", loca: "Intenacioal"},
-        {codigo : "02", tipo : "Pessoa Jurídica", loca: "Intenacional"},        
+        {codigo : "01", tipo : "Pessoa Física", local: "Nacional"},
+        {codigo : "02", tipo : "Pessoa Jurídica", local: "Nacional"},
+        {codigo : "03", tipo : "Sócios", local: "Nacional"},
+        {codigo : "04", tipo : "Exportador", local: "Internacioal"},
+        {codigo : "05", tipo : "Importador", local: "Internacioal"},        
     ];
     
     $scope.adicionarClientes = function(cliente){
