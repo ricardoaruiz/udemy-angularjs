@@ -19,7 +19,7 @@
                     <td><b>Código</b></td>
                     <td><b>Tipo Cliente</b></td>
                 </tr>
-                <tr ng-class="{selecionado: cliente.selecionado}" ng-repeat="cliente in clientes">
+                <tr ng-class="{'selecionado negrito': cliente.selecionado}" ng-repeat="cliente in clientes">
                     <td><input type="checkbox" ng-model="cliente.selecionado"></td>
                     <td>{{cliente.nome}}</td>                    
                     <td>{{cliente.codigo}}</td>
@@ -37,7 +37,9 @@
                 <option value="">Selecione um tipo de cliente</option>
             </select>
             
-            <button class="btn btn-primary btn-block" ng-click="adicionarClientes(cliente)" ng-disabled="!cliente.nome || !cliente.codigo">Adicionar</button>
+            <button class="btn btn-primary btn-block" ng-click="adicionarClientes(cliente)" ng-disabled="!cliente.nome || !cliente.codigo">Adicionar Cliente</button>
+            
+            <button class="btn btn-danger btn-block" ng-click="apagarClientes(cliente)">Adicionar Cliente</button>
             
             
         </div>
