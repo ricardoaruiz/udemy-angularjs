@@ -20,8 +20,10 @@ app.controller("CadClienteCtrl", function($scope){
         delete $scope.cliente;
     };
     
-    $scope.apagarCliente = function(cliente){
-      console.log(cliente);
+    $scope.apagarClientes = function(clientes){
+      $scope.clientes = clientes.filter(function(cliente){
+          if (!cliente.selecionado) return cliente;
+      });
     };
     
 })
