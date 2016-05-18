@@ -14,12 +14,14 @@
             
             <table class="table">
                 <tr>
+                    <td><b></b></td>
                     <td><b>Nome</b></td>
                     <td><b>Código</b></td>
                     <td><b>Tipo Cliente</b></td>
                 </tr>
-                <tr class="selecionado" ng-repeat="cliente in clientes">
-                    <td>{{cliente.nome}}</td>
+                <tr ng-class="{selecionado: cliente.selecionado}" ng-repeat="cliente in clientes">
+                    <td><input type="checkbox" ng-model="cliente.selecionado"></td>
+                    <td>{{cliente.nome}}</td>                    
                     <td>{{cliente.codigo}}</td>
                     <td>{{cliente.tipoCliente.tipo}}</td>
                 </tr>

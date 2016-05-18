@@ -19,4 +19,5 @@ app.controller("CadClienteCtrl", function($scope){
         $scope.clientes.push(angular.copy(cliente));
         delete $scope.cliente;
     };
+    
 })
