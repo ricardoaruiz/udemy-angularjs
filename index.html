@@ -18,12 +18,14 @@
                     <td><b>Nome</b></td>
                     <td><b>Código</b></td>
                     <td><b>Tipo Cliente</b></td>
+                    <td><b>Data de cadastro</b></td>
                 </tr>
                 <tr ng-class="{'selecionado negrito': cliente.selecionado}" ng-repeat="cliente in clientes">
                     <td><input type="checkbox" ng-model="cliente.selecionado"></td>
-                    <td>{{cliente.nome}}</td>                    
+                    <td>{{cliente.nome | uppercase}}</td>                    
                     <td>{{cliente.codigo}}</td>
                     <td>{{cliente.tipoCliente.tipo}}</td>
+                    <td>{{cliente.data | date : 'dd/MM/yyyy'}}</td>
                 </tr>
 
             </table>

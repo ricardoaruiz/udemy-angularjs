@@ -2,9 +2,9 @@ app.controller("CadClienteCtrl", function($scope){
     $scope.app="Cadastro de Clientes";
     
     $scope.clientes = [
-        {codigo : "0001", nome : "Ricardo",},
-        {codigo : "0002", nome : "Cinthya"},
-        {codigo : "0003", nome : "Guilherme"}
+        {codigo : "0001", nome : "Ricardo", data : new Date()},
+        {codigo : "0002", nome : "Cinthya", data : new Date()},
+        {codigo : "0003", nome : "Guilherme", data : new Date()}
     ];
     
     $scope.tipoClientes = [
