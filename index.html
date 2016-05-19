@@ -12,6 +12,8 @@
             
             <h3 ng-bind="app"></h3>
             
+            <input type="text" class="form-control" ng-model="filtro" placeholder="Busque aqui">
+            
             <table class="table">
                 <tr>
                     <td><b></b></td>
@@ -20,7 +22,8 @@
                     <td><b>Tipo Cliente</b></td>
                     <td><b>Data de cadastro</b></td>
                 </tr>
-                <tr ng-class="{'selecionado negrito': cliente.selecionado}" ng-repeat="cliente in clientes">
+                <tr ng-class="{'selecionado negrito': cliente.selecionado}" 
+                    ng-repeat="cliente in clientes | filter : filtro | orderBy : 'nome' : false">
                     <td><input type="checkbox" ng-model="cliente.selecionado"></td>
                     <td>{{cliente.nome | uppercase}}</td>                    
                     <td>{{cliente.codigo}}</td>
@@ -43,7 +46,7 @@
             
             <button class="btn btn-primary btn-block" ng-click="adicionarClientes(cliente)" ng-disabled="clienteForm.$invalid">Adicionar Cliente</button>
             
-            <button class="btn btn-danger btn-block" ng-click="apagarClientes(clientes)" ng-if="temClienteSelecionado(clientes)" >Adicionar Cliente</button>
+            <button class="btn btn-danger btn-block" ng-click="apagarClientes(clientes)" ng-if="temClienteSelecionado(clientes)" >Remover Cliente</button>
                         
         </div>
         
