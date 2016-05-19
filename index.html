@@ -30,14 +30,16 @@
             
             <hr>
 
-            <input class="form-control" type="text" ng-model="cliente.nome" placeholder="Nome">
-            <input class="form-control" type="text" ng-model="cliente.codigo" placeholder="Código">
+            <form name="clienteForm">
+                <input class="form-control" type="text" ng-model="cliente.nome" placeholder="Nome" ng-required="true">
+                <input class="form-control" type="text" ng-model="cliente.codigo" placeholder="Código" ng-required="true">
 
-            <select class="form-control" ng-model="cliente.tipoCliente" ng-options="tipoCliente.tipo group by tipoCliente.local for tipoCliente in tipoClientes">
-                <option value="">Selecione um tipo de cliente</option>
-            </select>
+                <select class="form-control" ng-model="cliente.tipoCliente" ng-options="tipoCliente.tipo group by tipoCliente.local for tipoCliente in tipoClientes" ng-required="true">
+                    <option value="">Selecione um tipo de cliente</option>
+                </select>
+            </form>
             
-            <button class="btn btn-primary btn-block" ng-click="adicionarClientes(cliente)" ng-disabled="!cliente.nome || !cliente.codigo">Adicionar Cliente</button>
+            <button class="btn btn-primary btn-block" ng-click="adicionarClientes(cliente)" ng-disabled="clienteForm.$invalid">Adicionar Cliente</button>
             
             <button class="btn btn-danger btn-block" ng-click="apagarClientes(clientes)" ng-if="temClienteSelecionado(clientes)" >Adicionar Cliente</button>
                         
