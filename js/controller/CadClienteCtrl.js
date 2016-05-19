@@ -6,18 +6,21 @@ app.controller("CadClienteCtrl", function($scope){
             codigo : "0001", 
             nome : "Ricardo", 
             data : new Date(), 
+            valor: "100",
             tipoCliente : {tipo : "Pessoa Física"}
         },
         {
             codigo : "0002", 
             nome : "Cinthya", 
             data : new Date(),
+            valor: "200",
             tipoCliente : {tipo : "Pessoa Física"}
         },
         {
             codigo : "0003", 
             nome : "Guilherme", 
             data : new Date(),
+            valor: "300",
             tipoCliente : {tipo : "Pessoa Física"}
         }
     ];

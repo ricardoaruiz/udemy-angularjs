@@ -21,6 +21,7 @@
                     <td><b>Código</b></td>
                     <td><b>Tipo Cliente</b></td>
                     <td><b>Data de cadastro</b></td>
+                    <td><b>Valor da compra</b></td>
                 </tr>
                 <tr ng-class="{'selecionado negrito': cliente.selecionado}" 
                     ng-repeat="cliente in clientes | filter : filtro | orderBy : 'nome' : false">
@@ -29,6 +30,7 @@
                     <td>{{cliente.codigo}}</td>
                     <td>{{cliente.tipoCliente.tipo}}</td>
                     <td>{{cliente.data | date : 'dd/MM/yyyy'}}</td>
+                    <td>{{cliente.valor | currency }}</td>
                 </tr>
 
             </table>
@@ -53,6 +55,7 @@
         <div ng-include="'rodape.html'"> </div>
         
         <script src="js/angular/angular.js"></script>
+        <script src="js/angular/i18n/angular-locale_pt-br.js"></script>
         <script src="js/app-cad-clientes.js"></script>
         <script src="js/controller/CadClienteCtrl.js"></script>        
     </body>
