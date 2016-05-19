@@ -26,4 +26,10 @@ app.controller("CadClienteCtrl", function($scope){
       });
     };
     
+    $scope.temClienteSelecionado = function(clientes){
+        return clientes.some(function(cliente){
+            return cliente.selecionado;
+        });
+    };
+    
 })

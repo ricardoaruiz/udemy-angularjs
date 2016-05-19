@@ -39,11 +39,11 @@
             
             <button class="btn btn-primary btn-block" ng-click="adicionarClientes(cliente)" ng-disabled="!cliente.nome || !cliente.codigo">Adicionar Cliente</button>
             
-            <button class="btn btn-danger btn-block" ng-click="apagarClientes(clientes)">Adicionar Cliente</button>
-            
-            
+            <button class="btn btn-danger btn-block" ng-click="apagarClientes(clientes)" ng-if="temClienteSelecionado(clientes)" >Adicionar Cliente</button>
+                        
         </div>
         
+        <div ng-include="'rodape.html'"></div>
         
         <script src="js/angular/angular.js"></script>
         <script src="js/app-cad-clientes.js"></script>
