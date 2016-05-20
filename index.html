@@ -6,12 +6,24 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
                 
         <title>Cadastro de Clientes</title>
+        
+        <script src="js/angular/angular.js"></script>
+        <script src="js/angular/i18n/angular-locale_pt-br.js"></script>
+        <script src="js/app-cad-clientes.js"></script>
+        <script src="diretivas/dir-alerta.js"></script>
+        <script src="js/controller/CadClienteCtrl.js"></script>                
     </head>
     <body ng-controller="CadClienteCtrl">
+        
         <div class="jumbotron">
             
+            <!-- Titulo -->
             <h3 ng-bind="app"></h3>
             
+            <!-- Diretiva de alerta -->
+            <div diralerta> </div>
+            
+            <!-- Campo de busca -->
             <input type="text" class="form-control" ng-model="filtro" placeholder="Busque aqui">
             
             <table class="table">
@@ -46,17 +58,17 @@
                 </select>
             </form>
             
-            <button class="btn btn-primary btn-block" ng-click="adicionarClientes(cliente)" ng-disabled="clienteForm.$invalid">Adicionar Cliente</button>
+            <button class="btn btn-primary btn-block" ng-click="adicionarClientes(cliente)" ng-disabled="clienteForm.$invalid">
+                Adicionar Cliente
+            </button>
             
-            <button class="btn btn-danger btn-block" ng-click="apagarClientes(clientes)" ng-if="temClienteSelecionado(clientes)" >Remover Cliente</button>
+            <button class="btn btn-danger btn-block" ng-click="apagarClientes(clientes)" ng-if="temClienteSelecionado(clientes)" >
+                Remover Cliente
+            </button>
                         
         </div>
         
         <div ng-include="'rodape.html'"> </div>
         
-        <script src="js/angular/angular.js"></script>
-        <script src="js/angular/i18n/angular-locale_pt-br.js"></script>
-        <script src="js/app-cad-clientes.js"></script>
-        <script src="js/controller/CadClienteCtrl.js"></script>        
     </body>
 </html>
